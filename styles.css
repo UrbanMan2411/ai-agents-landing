@@ -10,7 +10,6 @@
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -43,10 +42,11 @@ h1 {
   font-size: clamp(3rem, 6vw, 6rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
-  max-width: 10ch;
+  max-width: 11ch;
 }
-.lead { margin-top: 20px; max-width: 58ch; font-size: 1.1rem; line-height: 1.7; color: var(--muted); }
-.actions { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; }
+.lead { margin-top: 20px; max-width: 62ch; font-size: 1.1rem; line-height: 1.7; color: var(--muted); }
+.hero__result { margin-top: 18px; max-width: 48ch; padding: 14px 16px; border-radius: 18px; background: rgba(110, 231, 255, 0.1); border: 1px solid rgba(110, 231, 255, 0.24); color: var(--text); line-height: 1.6; }
+.actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
 .button {
   display: inline-flex;
   align-items: center;
@@ -72,11 +72,14 @@ h1 {
 .glass-card__top, .flow { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .glass-card__top { color: var(--muted); font-size: 0.95rem; margin-bottom: 28px; }
 .flow { flex-wrap: wrap; justify-content: center; }
+.flow--stack { flex-direction: column; align-items: stretch; }
+.flow-row { display: grid; gap: 12px; justify-items: center; }
 .flow__item, .flow__arrow {
   padding: 14px 18px;
   border-radius: 18px;
   background: rgba(255,255,255,0.08);
   border: 1px solid var(--border);
+  text-align: center;
 }
 .flow__item--accent { background: linear-gradient(135deg, rgba(110,231,255,0.24), rgba(167,139,250,0.24)); }
 .section { padding: 90px 0 0; }
@@ -85,7 +88,7 @@ h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1; letter-spacing: -0.04e
 .grid { display: grid; gap: 18px; }
 .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.panel, .stat, .step, .cta {
+.panel, .stat, .scenario, .cta, .trust-box {
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border);
   border-radius: 28px;
@@ -97,8 +100,11 @@ h3 { font-size: 1.3rem; margin-bottom: 16px; }
 ul { padding-left: 18px; margin: 0; color: var(--muted); line-height: 1.8; }
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .step span { display: inline-block; color: var(--accent); font-weight: 800; margin-bottom: 18px; }
-.step p, .stat p { color: var(--muted); line-height: 1.7; margin-top: 8px; }
+.step p, .stat p, .cta__text, .trust-box p, .scenario p { color: var(--muted); line-height: 1.7; margin-top: 8px; }
 .stat strong { font-size: 1.3rem; }
+.scenario-list { display: grid; gap: 16px; }
+.scenario { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: start; }
+.scenario span { color: var(--accent); font-weight: 800; font-size: 1rem; }
 .cta { margin-top: 90px; text-align: left; display: grid; gap: 18px; }
 .cta h2 { max-width: 18ch; }
 
@@ -113,5 +119,5 @@ ul { padding-left: 18px; margin: 0; color: var(--muted); line-height: 1.8; }
   main { width: min(100% - 24px, 1180px); }
   .section { padding-top: 70px; }
   h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }
-  .panel, .stat, .step, .cta, .glass-card { border-radius: 22px; padding: 22px; }
+  .panel, .stat, .scenario, .cta, .glass-card, .trust-box { border-radius: 22px; padding: 22px; }
 }
