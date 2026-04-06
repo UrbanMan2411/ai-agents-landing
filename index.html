@@ -11,133 +11,145 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">Open-style AI Agents</div>
+        <nav class="topbar__nav">
+          <a href="#scenarios">Сценарии</a>
+          <a href="#how">Как работает</a>
+          <a href="#contact">Демо</a>
+        </nav>
+      </header>
+
       <section class="hero">
-        <div class="hero__content">
+        <div class="hero__copy">
           <p class="eyebrow">AI-агенты для бизнеса</p>
-          <h1>AI-агенты, которые обрабатывают заявки, CRM и поддержку вместо ручной рутины</h1>
-          <p class="lead">Подключаем CRM, почту и мессенджеры, чтобы обращения автоматически попадали в нужный сценарий — с понятным результатом и контролем на каждом шаге.</p>
-          <div class="hero__result">Результат: заявки распределяются быстрее, процессы не теряются, команда видит всё в одном потоке.</div>
+          <h1>Автоматизируйте заявки, CRM и поддержку через один управляемый поток</h1>
+          <p class="lead">AI-агенты подключаются к формам, почте, мессенджерам и внутренним системам, чтобы события сразу превращались в действия — без ручной сортировки и потерь контекста.</p>
+          <div class="hero__facts">
+            <div><strong>3</strong><span>сценария в фокусе</span></div>
+            <div><strong>1</strong><span>единый поток</span></div>
+            <div><strong>0</strong><span>ручного хаоса</span></div>
+          </div>
           <div class="actions">
             <a href="#contact" class="button button--primary">Запросить демо</a>
-            <a href="#scenarios" class="button button--secondary">Смотреть сценарии</a>
+            <a href="#how" class="button button--ghost">Посмотреть как работает</a>
           </div>
         </div>
-        <div class="hero__visual">
-          <div class="glass-card">
-            <div class="glass-card__top">
-              <span>Сценарий</span>
-              <span>Лид → агент → действие</span>
+
+        <div class="hero__panel">
+          <div class="pipeline">
+            <div class="pipeline__head">
+              <span>Pipeline</span>
+              <span>CRM → Agent → Action</span>
             </div>
-            <div class="flow flow--stack">
-              <div class="flow-row">
-                <div class="flow__item">Форма / CRM</div>
-                <div class="flow__arrow">↓</div>
-                <div class="flow__item flow__item--accent">AI-агент</div>
-              </div>
-              <div class="flow-row">
-                <div class="flow__item">Проверка данных</div>
-                <div class="flow__arrow">↓</div>
-                <div class="flow__item">Задача / Slack / Email</div>
-              </div>
+            <div class="pipeline__flow">
+              <div class="node">Lead</div>
+              <div class="arrow">→</div>
+              <div class="node node--accent">Agent</div>
+              <div class="arrow">→</div>
+              <div class="node">Task</div>
+            </div>
+            <div class="pipeline__notes">
+              <div>• проверка данных</div>
+              <div>• маршрутизация</div>
+              <div>• уведомление команды</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section--pain">
+      <section class="section section--integrations">
         <div class="section__header">
-          <p class="eyebrow">Боль</p>
-          <h2>Когда заявки, поддержка и задачи живут в разных местах, команда теряет скорость</h2>
+          <p class="eyebrow">Интеграции</p>
+          <h2>Подключаемся к рабочим системам, а не живём отдельно</h2>
         </div>
-        <div class="grid grid--2">
-          <div class="panel">
-            <h3>Что происходит сейчас</h3>
-            <ul>
-              <li>Новые лиды теряются между формой, CRM и чатами</li>
-              <li>Поддержка вручную сортирует обращения и тратит время на уточнения</li>
-              <li>Операционные задачи расползаются по таблицам, почте и личным чатам</li>
-            </ul>
-          </div>
-          <div class="panel panel--accent">
-            <h3>Что меняется</h3>
-            <ul>
-              <li>Событие сразу запускает нужный сценарий</li>
-              <li>Агент сам решает, куда отправить задачу и что обновить</li>
-              <li>Команда видит процесс и контролирует результат без ручного хаоса</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--solution">
-        <div class="section__header">
-          <p class="eyebrow">Решение</p>
-          <h2>AI-агенты для продаж, поддержки и внутренних операций</h2>
-        </div>
-        <div class="grid grid--3">
-          <article class="stat">
-            <strong>Лиды и CRM</strong>
-            <p>Система принимает заявку, проверяет данные и отправляет её в нужную воронку или менеджеру.</p>
-          </article>
-          <article class="stat">
-            <strong>Поддержка</strong>
-            <p>Обращения классифицируются по теме и приоритету, затем уходят в правильную очередь.</p>
-          </article>
-          <article class="stat">
-            <strong>Операции</strong>
-            <p>Уведомления, согласования и внутренние задачи запускаются по событию без ручных шагов.</p>
-          </article>
+        <div class="integration-grid">
+          <div class="integration">CRM</div>
+          <div class="integration">Email</div>
+          <div class="integration">Telegram</div>
+          <div class="integration">Slack</div>
+          <div class="integration">Notion</div>
+          <div class="integration">Sheets</div>
         </div>
       </section>
 
       <section class="section" id="scenarios">
         <div class="section__header">
           <p class="eyebrow">Сценарии</p>
-          <h2>Три сценария, которые дают быстрый эффект</h2>
+          <h2>Три сценария, которые дают быстрый и понятный эффект</h2>
         </div>
         <div class="scenario-list">
           <article class="scenario">
             <span>01</span>
             <div>
               <h3>Новая заявка → CRM → менеджер</h3>
-              <p>Форма с сайта или сообщение в мессенджере превращаются в сделку, задачу и уведомление нужному человеку.</p>
+              <p>Форма с сайта или сообщение из мессенджера сразу создаёт сделку, задачу и уведомление.</p>
             </div>
           </article>
           <article class="scenario">
             <span>02</span>
             <div>
               <h3>Обращение клиента → поддержка</h3>
-              <p>Агент определяет тему, ставит приоритет и отправляет запрос в правильную очередь или специалисту.</p>
+              <p>Агент определяет тему обращения, ставит приоритет и отправляет запрос в нужную очередь.</p>
             </div>
           </article>
           <article class="scenario">
             <span>03</span>
             <div>
-              <h3>Смена статуса → цепочка задач</h3>
+              <h3>Статус сделки → цепочка действий</h3>
               <p>При изменении статуса обновляются таблицы, создаются задачи и уходят письма без участия команды.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section">
+      <section id="how" class="section">
+        <div class="section__header">
+          <p class="eyebrow">Как работает</p>
+          <h2>Событие запускает сценарий, агент выполняет действие, команда видит результат</h2>
+        </div>
+        <div class="steps steps--compact">
+          <article class="step">
+            <span>01</span>
+            <h3>Триггер</h3>
+            <p>Событие приходит из CRM, формы, почты или чата.</p>
+          </article>
+          <article class="step">
+            <span>02</span>
+            <h3>Контекст</h3>
+            <p>Агент проверяет данные и понимает, что нужно сделать.</p>
+          </article>
+          <article class="step">
+            <span>03</span>
+            <h3>Действие</h3>
+            <p>Создаёт задачу, уведомление или обновление в системе.</p>
+          </article>
+          <article class="step">
+            <span>04</span>
+            <h3>Контроль</h3>
+            <p>Команда видит лог, статус и итог в одном месте.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--result">
         <div class="section__header">
           <p class="eyebrow">Результат</p>
-          <h2>Что получает бизнес после запуска</h2>
+          <h2>Меньше ручной работы, быстрее обработка, меньше потерь</h2>
         </div>
-        <div class="grid grid--3">
-          <div class="stat">
-            <strong>Быстрее</strong>
-            <p>Процессы стартуют сразу после события, без ручной пересылки и ожидания.</p>
+        <div class="result-grid">
+          <div class="result-card">
+            <strong>Скорость</strong>
+            <p>Обращения не ждут очереди — сценарий запускается сразу.</p>
           </div>
-          <div class="stat">
-            <strong>Точнее</strong>
-            <p>Меньше ошибок, связанных с переносом данных и потерей контекста.</p>
+          <div class="result-card">
+            <strong>Точность</strong>
+            <p>Данные не теряются между чатами, письмами и таблицами.</p>
           </div>
-          <div class="stat">
-            <strong>Прозрачнее</strong>
-            <p>Каждое действие логируется, а команда видит, что произошло и почему.</p>
+          <div class="result-card">
+            <strong>Прозрачность</strong>
+            <p>Каждое действие можно отследить и проверить.</p>
           </div>
         </div>
       </section>
@@ -145,16 +157,19 @@
       <section class="section section--trust">
         <div class="section__header">
           <p class="eyebrow">Доверие</p>
-          <h2>Здесь лучше добавить реальные кейсы, цифры и логотипы</h2>
+          <h2>Сюда стоит добавить кейсы, цифры и логотипы клиентов</h2>
         </div>
-        <div class="trust-box">
-          <p>Сейчас блок оставлен как место под доказательства: 2–3 цифры, короткий кейс, логотипы клиентов и отзыв. Это заметно усилит доверие к офферу.</p>
+        <div class="trust-bar">
+          <div>12+ сценариев</div>
+          <div>5 интеграций</div>
+          <div>24/7 автоматизация</div>
+          <div>Контроль по логам</div>
         </div>
       </section>
 
       <section id="contact" class="cta">
         <p class="eyebrow">Следующий шаг</p>
-        <h2>Покажем, где AI-агенты сэкономят время уже в первую неделю</h2>
+        <h2>Покажем, какие процессы можно забрать в автоматизацию уже сейчас</h2>
         <p class="cta__text">Разберём ваши сценарии, выберем 2–3 приоритетных процесса и соберём план внедрения.</p>
         <a href="mailto:hello@example.com" class="button button--primary">Запросить демо</a>
       </section>
